@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import Input from "@flexcodelabs/input";
+import "./styles.css";
 
 const UseCase = () => {
   const [variables, setVariables] = React.useState<{
@@ -17,6 +18,11 @@ const UseCase = () => {
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     // onChange event
+    const { name, value } = e.target;
+    setVariables({
+      ...variables,
+      [name]: value,
+    });
   };
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -25,13 +31,7 @@ const UseCase = () => {
   return (
     <form onSubmit={handleSubmit}>
       <p>Normal input</p>
-      <Input
-        label="Label"
-        value={email}
-        name="email"
-        onChange={onChange}
-        placeholder="Label"
-      />
+      <Input label="Label" value={email} name="email" onChange={onChange} />
       <p>password input</p>
       <Input
         label="Password"
@@ -39,7 +39,6 @@ const UseCase = () => {
         type="password"
         name="password"
         onChange={onChange}
-        placeholder="********"
       />
       <p>message input</p>
       <Input
@@ -47,7 +46,7 @@ const UseCase = () => {
         textarea
         required
         value={message}
-        handleChange={onChange}
+        onChange={onChange}
         name="message"
       />
       <p>Input with error message</p>
@@ -56,7 +55,6 @@ const UseCase = () => {
         value={email}
         name="email"
         onChange={onChange}
-        placeholder="Label"
         error="Error message"
       />
       <p>Input with success message</p>
@@ -65,7 +63,6 @@ const UseCase = () => {
         value={email}
         name="email"
         onChange={onChange}
-        placeholder="Label"
         success="Success message"
       />
     </form>

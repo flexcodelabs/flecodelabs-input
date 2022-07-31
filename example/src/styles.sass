@@ -1,0 +1,63 @@
+
+form
+    width: 90%
+    max-width: 600px
+    margin: 0 auto
+
+.p-a
+    position: absolute
+
+.right-0
+    right: 0
+
+.field-group
+    width: 100%
+    margin-bottom: 1rem
+    .input-group
+        position: relative
+        width: 100%
+        label
+            position: absolute
+            top: 1.5rem
+            left: 0
+            transform: translate(0, -50%)
+            transition: all .3s linear
+            &.label-focused
+                top: 0
+                transform: translate(0, -20%)
+        input, textarea
+            padding: 1rem 0
+            resize: none
+            width: 100%
+            border: none
+            border-bottom: 1px solid gray
+            color: black
+            font-size: 1rem
+            transition: .25s
+            &:focus, &:hover
+                border-color: darkgray
+                outline: none
+            &.error
+                border-color: red
+            &.success
+                border-color: green
+            &:disabled
+                border-color: #4a535b
+                color: #4a535b
+        textarea
+            min-height: 100px
+            font-family: PoppinsRegular
+        .toggle-password
+            position: absolute
+            height: 100%
+            top: 0
+            button
+                cursor: pointer
+                height: 100%
+                width: 50px
+    .field-error, .field-success
+        color: red
+        font-size: .8rem
+        margin-top: .5rem
+    .field-success
+        color: green
