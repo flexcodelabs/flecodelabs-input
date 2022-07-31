@@ -52,7 +52,7 @@ const Input: FC<InputProps> = ({
   error = "",
   onChange,
   type,
-  required,
+  required = false,
   showLabel = true,
   textarea,
   inputMode,
@@ -104,7 +104,7 @@ const Input: FC<InputProps> = ({
             value={value}
             placeholder={placeholder}
             style={{
-              paddingRight: type === "password" ? "50px" : "",
+              ...inputStyle,
             }}
             required={required}
           />
@@ -124,7 +124,6 @@ const Input: FC<InputProps> = ({
             onBlur={() => setFocused(false)}
             value={value}
             style={{
-              paddingRight: "1rem",
               ...inputStyle,
             }}
             required={required}
