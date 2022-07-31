@@ -26,8 +26,5 @@
   },
   "files": [
     "/lib"
-  ],
-  "dependencies": {
-    "jq": "^1.7.2"
-  }
+  ]
 }
