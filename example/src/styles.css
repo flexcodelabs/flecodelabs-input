@@ -1,0 +1,97 @@
+form {
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.p-a {
+  position: absolute;
+}
+
+.right-0 {
+  right: 0;
+}
+
+.field-group {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.field-group .input-group {
+  position: relative;
+  width: 100%;
+}
+
+.field-group .input-group label {
+  position: absolute;
+  top: 1.5rem;
+  left: 0;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+}
+
+.field-group .input-group label.label-focused {
+  top: 0;
+  -webkit-transform: translate(0, -20%);
+          transform: translate(0, -20%);
+}
+
+.field-group .input-group input, .field-group .input-group textarea {
+  padding: 1rem 0;
+  resize: none;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid gray;
+  color: black;
+  font-size: 1rem;
+  -webkit-transition: .25s;
+  transition: .25s;
+}
+
+.field-group .input-group input:focus, .field-group .input-group input:hover, .field-group .input-group textarea:focus, .field-group .input-group textarea:hover {
+  border-color: darkgray;
+  outline: none;
+}
+
+.field-group .input-group input.error, .field-group .input-group textarea.error {
+  border-color: red;
+}
+
+.field-group .input-group input.success, .field-group .input-group textarea.success {
+  border-color: green;
+}
+
+.field-group .input-group input:disabled, .field-group .input-group textarea:disabled {
+  border-color: #4a535b;
+  color: #4a535b;
+}
+
+.field-group .input-group textarea {
+  min-height: 100px;
+  font-family: PoppinsRegular;
+}
+
+.field-group .input-group .toggle-password {
+  position: absolute;
+  height: 100%;
+  top: 0;
+}
+
+.field-group .input-group .toggle-password button {
+  cursor: pointer;
+  height: 100%;
+  width: 50px;
+}
+
+.field-group .field-error, .field-group .field-success {
+  color: red;
+  font-size: .8rem;
+  margin-top: .5rem;
+}
+
+.field-group .field-success {
+  color: green;
+}
+/*# sourceMappingURL=styles.css.map */
