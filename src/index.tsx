@@ -104,7 +104,7 @@ const Input: FC<InputProps> = ({
             value={value}
             placeholder={placeholder}
             style={{
-              paddingRight: type === "password" ? "50px" : "1rem",
+              paddingRight: type === "password" ? "50px" : "",
             }}
             required={required}
           />
