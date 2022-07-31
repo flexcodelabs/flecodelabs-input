@@ -1,3 +1,5 @@
+# 0.1.5
+* add minor fixes for minor release
 # 0.1.4
 * fix and updating new release publish workflow
 # 0.1.3
