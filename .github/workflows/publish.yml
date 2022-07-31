@@ -21,15 +21,14 @@ jobs:
         with:
           node-version: '14.x'
           registry-url: 'https://registry.npmjs.org'
-      # - name: Install dependencies and build 🔧
-      #   run: npm install && npm run build
-      # - name: Publish package on NPM 📦
-      #   run: npm publish --access public
-      #   env:
-      #     NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+      - name: Install dependencies and build 🔧
+        run: npm install && npm run build
+      - name: Publish package on NPM 📦
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
       # update version
       - name: install jq
-        # run: npm install --save-dev jq
         run: |
           sudo apt-get update 
           sudo apt-get -y install jq
